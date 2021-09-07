@@ -1,10 +1,13 @@
-import colors from 'vuetify/es5/util/colors'
+import vuetifyOptions from './plugins/vuetify.options'
+import i18n from './i18n'
+
+const path = require('path');
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - accounts',
-    title: 'accounts',
+    titleTemplate: '%s - Accounts - Community Tools',
+    title: 'Community Tools Accounts',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,10 +21,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'material-design-icons-iconfont/dist/material-design-icons.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/components'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,7 +45,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -55,24 +61,20 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    ...vuetifyOptions,
+    treeShake: false,
     customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
   },
+
+  // i18n settings
+  i18n,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config) {
+      // To avoid vue and vuetify being loaded twice, just alias them ;)
+      config.resolve.alias['vue$'] = path.resolve('./node_modules/vue/dist/vue.runtime.esm.js')
+      config.resolve.alias['^vuetify'] = path.resolve(__dirname, 'node_modules/vuetify')
+    }
   }
 }

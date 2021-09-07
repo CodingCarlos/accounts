@@ -14,6 +14,12 @@
           </small>
         </footer>
       </blockquote>
+
+      <p>
+        <nuxt-link to="/">
+          <v-btn>Home</v-btn>
+        </nuxt-link>
+      </p>
     </v-col>
   </v-row>
 </template>

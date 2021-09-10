@@ -2,6 +2,7 @@
   <v-app>
     <v-app-bar
       fixed
+      flat
       app
     >
       <v-toolbar-title v-text="title" />

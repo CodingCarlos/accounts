@@ -5,26 +5,19 @@
       flat
       app
     >
-      <v-toolbar-title v-text="title" />
-
+      <a href="https://communitytools.co">
+        <v-toolbar-title v-text="title" />
+      </a>
       <v-spacer />
-
       <v-btn
         icon
       >
         <v-icon>mdi-account</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-main>
-        <Nuxt />
+    <v-main class="pb-0">
+      <Nuxt />
     </v-main>
-
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }} CommunityTools</span>
-    </v-footer>
   </v-app>
 </template>
 

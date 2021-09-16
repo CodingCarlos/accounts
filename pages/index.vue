@@ -1,5 +1,12 @@
 <template>
   <v-row align="center" class="flex-column">
+    <!-- app bar -->
+    <v-app-bar
+      flat
+      width="100%"
+    >
+    </v-app-bar>
+    <!-- /app bar -->
     <!-- Login -->
     <v-col
       lg="4"
@@ -56,6 +63,7 @@
           v-if="!forgotPassword"
           justify-center
           mt-2
+          class="hide-gfs"
         >
           <v-flex class="pt-3 pb-2">
             <!-- Section header -->
@@ -69,14 +77,14 @@
                 label="Email"
                 type="email"
                 name="email"
-                outlined
+                outline
                 class="mt-3"
                 :class="{ 'd-none': showPass }"
               ></v-text-field>
 
               <!-- Password form -->
               <v-chip
-                outlined
+                outline
                 text-color="black"
                 class="mt-2 mb-3"
                 :class="{ 'd-none': !showPass }"
@@ -102,7 +110,7 @@
 
               <v-card-actions class="pa-0 justify-space-between">
                 <!-- Email buttons -->
-                <CTButton
+                <!-- <CTButton
                   block
                   large
                   color="primary"
@@ -112,7 +120,7 @@
                   @click="showPass = true"
                 >
                   Login with email
-                </CTButton>
+                </CTButton> -->
                 <CTButton
                   flat
                   large
@@ -158,11 +166,6 @@
       <!-- /Trouble loggin in -->
     </v-col>
     <!-- /Login -->
-    <p>
-      <nuxt-link to="/onboarding">
-        <v-btn>to onboarding</v-btn>
-      </nuxt-link>
-    </p>
     <!-- Image -->
     <!-- <v-col
       lg="8"
@@ -181,6 +184,6 @@
 
 <script>
 export default {
-  layout: 'default'
+  layout: 'empty'
 }
 </script>

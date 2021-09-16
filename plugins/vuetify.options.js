@@ -14,7 +14,8 @@ export default {
         error: '#EA4335',
         info: '#4285F4',
         success: '#34A853',
-        warning: '#FBBC04'
+        warning: '#FBBC04',
+        border: '#e0e0e0',
       }
     }
   },

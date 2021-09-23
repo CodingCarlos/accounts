@@ -57,7 +57,6 @@
             name="email"
             outlined
             class="mt-3"
-            :class="{ 'd-none': showPass }"
           />
           <nuxt-link to="/onboarding">
             <CTButton

@@ -57,7 +57,6 @@
             name="email"
             outlined
             class="mt-3"
-            :class="{ 'd-none': showPass }"
           />
           <nuxt-link to="/launcher">
             <CTButton
@@ -95,7 +94,6 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        :width="width"
         max-width="600px"
         src="https://storage.googleapis.com/gfs-directory/pic/X/P/XPbk2ztq25p0BMfZWc2aD.png"
         style="border-radius: 8px;"

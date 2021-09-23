@@ -36,7 +36,6 @@
             name="email"
             outlined
             class="mt-3"
-            :class="{ 'd-none': showPass }"
           />
         </v-form>
         <!-- /Name -->
@@ -59,7 +58,6 @@
             name="email"
             outlined
             class="mt-3"
-            :class="{ 'd-none': showPass }"
           />
         </v-form>
         <!-- /URL -->

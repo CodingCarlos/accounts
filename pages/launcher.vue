@@ -20,7 +20,6 @@
             <div>madrid.gfs.directory</div>
             <p class="text-h4 text--primary" v-text="card.title" />
           </v-card-text>
-
           <v-card-actions>
             <a href="https://madrid.gfs.directory/#/directory">
               <v-btn outlined>

@@ -34,7 +34,7 @@
               Try for free
             </CTButton>
           </nuxt-link>
-          <nuxt-link to="/create">
+          <nuxt-link to="/onboarding">
             <CTButton
               large
               block

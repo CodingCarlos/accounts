@@ -14,7 +14,7 @@
             </div>
           </div>
           <p class="subheading mb-0 px-6">
-            Already have a Community Tools account? Access from the <nuxt-link to="/">login page</nuxt-link>
+            Already have a Community Tools account? Access from the <nuxt-link to="/login">login page</nuxt-link>
           </p>
         </div>
         <!-- /Header -->

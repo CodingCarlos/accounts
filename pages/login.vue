@@ -5,6 +5,14 @@
       lg="4"
       class="fill-height d-flex flex-column justify-center px-6"
     >
+      <v-app-bar
+        flat
+        class="white justify-space-between"
+      >
+        <nuxt-link to="/">
+          <v-toolbar-title v-text="title" />
+        </nuxt-link>
+      </v-app-bar>
       <v-form>
         <!-- Header -->
         <div>
@@ -79,13 +87,21 @@
         <!-- / -->
       </v-form>
       <!-- /Name -->
-      <!-- Footer -->
-      <!-- <v-footer
-        app
+      <v-footer
+        padless
       >
-        <span>&copy; {{ new Date().getFullYear() }} CommunityTools</span>
-      </v-footer> -->
-      <!-- /Footer -->
+        <v-row
+          justify="center"
+          no-gutters
+        >
+          <v-col
+            class="py-4 text-center"
+            cols="12"
+          >
+            {{ new Date().getFullYear() }} — <strong>Community Tools</strong>
+          </v-col>
+        </v-row>
+      </v-footer>
     </v-col>
     <!-- Promo -->
     <v-col
@@ -105,6 +121,12 @@
 
 <script>
 export default {
-  layout: 'default'
+  layout: 'default-2',
+  data () {
+    return {
+      title: 'Community Tools',
+      dialog: false
+    }
+  }
 }
 </script>

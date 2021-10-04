@@ -123,7 +123,7 @@
 <script>
 export default {
 
-  layout: 'default',
+  layout: 'default-2',
 
   data: () => ({
     recent: [

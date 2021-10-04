@@ -1,59 +1,101 @@
 <template>
   <v-app>
-
-    <!-- <v-banner
-      single-line
-    >
-      We can't save your edits while you are in offline mode.
-
-      <template v-slot:actions>
-        <v-btn
-          text
-          color="deep-purple accent-4"
-        >
-          Get Online
-        </v-btn>
-      </template>
-    </v-banner> -->
-
     <v-app-bar
       app
       flat
       fixed
-      class="white"
+      class="white justify-space-between px-lg-6"
     >
 
       <nuxt-link to="/">
-        <v-toolbar-title v-text="title" />
+        <!-- <v-toolbar-title v-text="title" /> -->
+        <v-img
+          height="56"
+          width="164"
+          src="https://communitytools.co/img/logo.svg"
+          class="mr-8"
+          contain
+        ></v-img>
       </nuxt-link>
+
+      <v-spacer class="d-lg-none"></v-spacer>
 
       <v-row
         horizontal
         class="elevation-0 d-none d-lg-flex"
       >
-        <v-btn
+        <CTButton
           text
+          color="black"
         >
-          <span>Product</span>
-        </v-btn>
-
-        <v-btn
+          <span class="font-weight-bold">
+            Help
+          </span>
+        </CTButton>
+        <CTButton
           text
+          color="black"
         >
-          <span>About</span>
-        </v-btn>
-
-        <v-btn
+          <span class="font-weight-bold">
+            About
+          </span>
+        </CTButton>
+        <CTButton
           text
+          color="black"
         >
-          <span>Help</span>
-        </v-btn>
+          <span class="font-weight-bold">
+            Blog
+          </span>
+        </CTButton>
+        <CTButton
+          text
+          color="black"
+        >
+          <span class="font-weight-bold">
+            Contact
+          </span>
+        </CTButton>
+        <a href="https://intercom.help/communitytools/">
+          <CTButton
+            text
+            color="black"
+          >
+            <span class="font-weight-bold">
+              Help
+            </span>
+          </CTButton>
+        </a>
       </v-row>
 
-      <nuxt-link to="/create">
+      <nuxt-link
+        to="/create"
+        class="hidden-md-and-down mr-2"
+      >
+        <CTButton
+          contained
+          class="elevation-0"
+        >
+          Create account
+        </CTButton>
+      </nuxt-link>
+      <nuxt-link
+        to="/login"
+        class="hidden-md-and-down"
+      >
         <CTButton
         >
-          get started
+          Log in
+        </CTButton>
+      </nuxt-link>
+
+      <nuxt-link
+        to="/create"
+        class="hidden-lg-and-up">
+        <CTButton
+          contained
+        >
+          Get started
         </CTButton>
       </nuxt-link>
 
@@ -86,7 +128,7 @@
       </v-sheet> -->
       <!-- / -->
 
-      <!--  -->
+      <!-- Cookies -->
       <template>
         <v-row justify="center">
           <v-dialog
@@ -140,9 +182,34 @@
           </v-dialog>
         </v-row>
       </template>
-      <!-- / -->
+      <!-- /Cookies -->
 
       <Nuxt />
+
+      <v-footer
+        color="white"
+      >
+        <v-row
+          justify="center"
+          no-gutters
+        >
+          <CTButton
+            v-for="link in links"
+            :key="link"
+            text
+            rounded
+            class="my-2 black--text"
+          >
+            {{ link }}
+          </CTButton>
+          <v-col
+            class="py-4 text-center"
+            cols="12"
+          >
+            {{ new Date().getFullYear() }} — <strong>Community Tools</strong>
+          </v-col>
+        </v-row>
+      </v-footer>
     </v-main>
   </v-app>
 </template>
@@ -164,11 +231,17 @@
 
 <script>
 export default {
-  data () {
-    return {
-      title: 'Community Tools',
-      dialog: true
-    }
-  }
+  data: () => ({
+    title: 'Community Tools',
+    dialog: false,
+    links: [
+      'Home',
+      'About Us',
+      'Team',
+      'Services',
+      'Blog',
+      'Contact Us'
+    ]
+  })
 }
 </script>

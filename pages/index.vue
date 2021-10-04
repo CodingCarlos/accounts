@@ -17,8 +17,7 @@
         <div>
           <div class="pa-0">
             <div
-              class="text-h2 text-center font-weight-black"
-              style="font-size: 4rem !important; line-height: 1;"
+              class="text-h2 text-sm-h5 text-center font-weight-black"
             >
               <span>Tools</span> to help your community members <span>connect</span>
             </div>
@@ -210,7 +209,7 @@
             <div class="text-h3 text-center font-weight-bold">
               <span>Need help importing your members? Don't know how to spark connections? <span style="color: var(--v-primary-base);">We're here to help.</span></span>
             </div>
-            <br />
+            <br>
             <div class="text-h4 text-center">
               <span>Click on that shiny blue bubble at the right bottom and we'll be there for you</span>
             </div>
@@ -246,12 +245,17 @@
             <v-chip
               class="mb-2"
               label
+              style="background: #e8f0fe;"
             >
-              Coming soon
+              <span
+                style="color: var(--v-primary-base);"
+              >
+                Coming soon
+              </span>
             </v-chip>
-            <br />
+            <br>
             <span>
-            Connect your Directory to <span style="color: var(--v-primary-base);">Slack</span> or <span style="color: var(--v-primary-base);">Discord</span> to get custom matches, searching members from a channel and more.
+              Connect your Directory to <span style="color: var(--v-primary-base);">Slack</span> or <span style="color: var(--v-primary-base);">Discord</span> to get custom matches, searching members from a channel and more.
             </span>
           </div>
           <!-- <nuxt-link to="/directory">
@@ -267,7 +271,7 @@
       <!-- Product image -->
       <v-col
         lg="6"
-        class="fill-height d-none d-lg-flex justify-center align-center"
+        class="fill-height justify-center align-center"
       >
         <v-img
           contain
@@ -312,19 +316,123 @@
       <!-- Header -->
       <v-col
         sm="12"
-        lg="12"
+        lg="7"
         class="d-flex flex-column justify-center px-6 mb-6 pt-6"
       >
         <div>
           <div class="pa-0 mb-4 justify-center">
             <div class="text-h3 text-center hache-1">
-              <strong>Trusted by<br><span style="color: var(--v-primary-base);">Google for Startups</span><br>all across the world</strong>
+              <strong>Trusted by companies like <span style="color: var(--v-primary-base);">Google for Startups</span> all around the world</strong>
             </div>
           </div>
         </div>
       </v-col>
       <!-- /Header -->
       <!-- Cards -->
+      <v-row
+        class="mb-2"
+      >
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          style="border-radius: 24px;"
+        >
+          <v-card-text class="text-h5 font-weight-bold">
+            Tel Aviv
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Elias Veris</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          style="border-radius: 24px;"
+        >
+          <v-card-text class="text-h5 font-weight-bold">
+            Seoul
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Inbal Perlman</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          style="border-radius: 24px;"
+        >
+          <v-card-text
+            class="text-h5 font-weight-bold"
+          >
+            Sao Paulo
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Kristine Chung</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          style="border-radius: 24px;"
+        >
+          <v-card-text
+            class="text-h5 font-weight-bold"
+          >
+            Warsaw
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Kristine Chung</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+      </v-row>
       <v-row
         class="pb-6 mb-6"
       >
@@ -336,7 +444,7 @@
           style="border-radius: 24px;"
         >
           <v-card-text class="text-h5 font-weight-bold">
-            "This is the best product I've ever used."
+            Madrid
           </v-card-text>
           <v-card-actions>
             <v-list-item>
@@ -361,7 +469,7 @@
           style="border-radius: 24px;"
         >
           <v-card-text class="text-h5 font-weight-bold">
-            "This is the best product I've ever used."
+            Tokyo
           </v-card-text>
           <v-card-actions>
             <v-list-item>
@@ -388,7 +496,7 @@
           <v-card-text
             class="text-h5 font-weight-bold"
           >
-            "This is the best product I've ever used."
+            Jakarta
           </v-card-text>
           <v-card-actions>
             <v-list-item>
@@ -412,29 +520,27 @@
 
     <!-- Banner -->
     <div
-      sm="12"
-      lg="12"
-      class="d-flex flex-lg-row flex-xs-column align-center justify-center my-6 mx-sm-4 pt-6"
-      style="width: 100%;"
+      lg="6"
+      class="my-6 mx-sm-4 pt-6"
     >
-      <v-col
-        sm="12"
-        lg="7"
-        class="d-flex flex-lg-row flex-xs-column align-center pa-8 primary"
+      <div
+        class="pa-8 primary banner d-flex align-center"
         style="border-radius: 24px;"
       >
         <!-- Header -->
-        <div class="px-4">
+        <v-col
+          class="px-lg-4 pa-sm-0"
+        >
           <div
-            class="text-h3 white--text font-weight-bold text-lg-left mr-lg-4 py-lg-4"
+            class="text-h3 white--text font-weight-bold mr-lg-4 py-lg-4"
           >
             Create now your free account
           </div>
-        </div>
+        </v-col>
         <!-- /Header -->
-        <!-- Google login -->
-        <div
-          class="mt-4 pa-4 d-flex flex-lg-row flex-xs-column"
+        <!-- CTA -->
+        <v-col
+          class="align-xs-center"
         >
           <nuxt-link
             to="/create"
@@ -442,7 +548,6 @@
           >
             <CTButton
               large
-              block
               contained
               color="white"
               class="elevation-0"
@@ -451,10 +556,9 @@
               <span class="px-4">Get started</span>
             </CTButton>
           </nuxt-link>
-        </div>
-        <!-- /Google login -->
-      <!-- /Name -->
-      </v-col>
+        </v-col>
+        <!-- /CTA -->
+      </div>
     </div>
     <!-- /Banner -->
   </v-row>
@@ -467,7 +571,28 @@ export default {
 </script>
 
 <style scoped>
+  .text-h2 {
+    font-size: 4rem !important;
+    line-height: 1;
+  }
   .v-btn {
     min-height: 44px;
   }
+  .banner {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+    .banner .text-h3 {
+      text-align: left;
+    }
+  @media (max-width: 600px) {
+    .banner {
+      flex-direction: column !important;
+      margin: auto 16px;
+    }
+      .banner .text-h3 {
+        text-align: center;
+      }
+}
 </style>

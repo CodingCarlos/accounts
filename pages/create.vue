@@ -41,8 +41,8 @@
               block
               contained
               color="primary"
-              @click="e1 = 2"
               class="elevation-0"
+              @click="e1 = 2"
             >
               Sign up with Google
             </CTButton>
@@ -73,8 +73,8 @@
               block
               contained
               color="primary"
-              @click="e1 = 2"
               class="elevation-0"
+              @click="e1 = 2"
             >
               Sign up with email
             </CTButton>

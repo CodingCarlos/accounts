@@ -1,328 +1,462 @@
 <template>
   <v-row justify="center" align="center" class="ma-0 align-center text-center">
-    <!-- 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <!-- Value prop -->
     <v-row
-      class="py-6"
+      class="py-6 my-6 justify-center"
     >
       <v-col
+        class="d-flex flex-column justify-center pt-8"
+        lg="9"
         sm="12"
-        lg="4"
-        class="d-flex flex-column justify-center px-6"
       >
         <!-- Header -->
         <div>
           <div class="pa-0">
-            <div class="text-h2 text-left hache-1">
-              Help your community members connect
+            <div
+              class="text-h2 text-center font-weight-black"
+              style="font-size: 4rem !important; line-height: 1;"
+            >
+              <span>Tools</span> to help your community members <span>connect</span>
             </div>
           </div>
         </div>
         <!-- /Header -->
-        <!-- Google login -->
+        <!-- Login -->
         <v-row
-          class="mt-4 pa-4"
+          class="mt-4 pa-4 justify-center align-center"
         >
-          <nuxt-link to="/create">
-            <CTButton
-              large
-              block
-              contained
-              color="primary"
-              @click="e1 = 2"
-              class="elevation-0 mr-2"
-            >
-              Try for free
-            </CTButton>
-          </nuxt-link>
           <nuxt-link to="/onboarding">
             <CTButton
               large
               block
               contained
               color="primary"
-              @click="e1 = 2"
               class="elevation-0"
+              @click="e1 = 2"
             >
               Sign up with Google
             </CTButton>
           </nuxt-link>
+          <span class="mx-3">or</span>
+          <nuxt-link
+            to="/create"
+            class="text-decoration-none"
+          >
+            <CTButton
+              large
+              block
+              color="primary"
+              class="elevation-0 mr-2"
+              @click="e1 = 2"
+            >
+              Use your mail
+            </CTButton>
+          </nuxt-link>
         </v-row>
-        <!-- /Google login -->
-      <!-- /Name -->
-      <!-- Footer -->
-      <!-- <v-footer
-        app
-      >
-        <span>&copy; {{ new Date().getFullYear() }} CommunityTools</span>
-      </v-footer> -->
-      <!-- /Footer -->
+        <!-- /Login -->
       </v-col>
-      <!-- Promo -->
-      <v-col
-        lg="8"
-        class="fill-height d-none d-lg-flex justify-center align-center"
-      >
-        <v-img
-          :aspect-ratio="16/9"
-          max-width="600px"
-          src="https://ivoriginal.com/images/work/gfs-directory/directory-pannels.png"
-          style="border-radius: 8px;"
-        />
-      </v-col>
-      <!-- /Promo -->
     </v-row>
-    <!-- /1 -->
+    <!-- /Value prop -->
+
     <!-- Clients -->
-    <v-row>
-      <v-col
-        cols="3"
-        lg="4"
+    <div
+      class="mx-lg-6"
+    >
+      <v-row
+        class="justify-center px-6"
       >
-        <v-img
-          src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-        ></v-img>
-      </v-col>
-
-      <v-col
-        cols="3"
-        lg="4"
-      >
-        <v-img src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg">
-          <div class="fill-height bottom-gradient"></div>
-        </v-img>
-      </v-col>
-
-      <v-col
-        cols="3"
-        lg="4"
-      >
-        <v-img src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg">
-          <div class="fill-height repeating-gradient"></div>
-        </v-img>
-      </v-col>
-    </v-row>
+        <v-col
+          lg="2"
+        >
+          <v-img
+            src="https://communitytools.co/img/clients/google.png"
+          />
+        </v-col>
+        <v-col
+          lg="2"
+        >
+          <v-img
+            src="https://communitytools.co/img/clients/startupweekend.png"
+          />
+        </v-col>
+        <v-col
+          lg="2"
+        >
+          <v-img
+            src="https://communitytools.co/img/clients/gazaskygeeks.png"
+          />
+        </v-col>
+        <v-col
+          lg="2"
+        >
+          <v-img
+            src="https://communitytools.co/img/clients/correoslabs.png"
+          />
+        </v-col>
+        <v-col
+          lg="2"
+        >
+          <v-img
+            src="https://communitytools.co/img/clients/tetuanvalley.png"
+          />
+        </v-col>
+        <v-col
+          lg="2"
+        >
+          <v-img
+            src="https://communitytools.co/img/clients/seedrocket.png"
+          />
+        </v-col>
+      </v-row>
+    </div>
     <!-- /Clients -->
-    <!-- 3 -->
-    <v-row class="my-6">
-      <!-- Promo -->
-      <v-col
-        lg="8"
-        class="fill-height d-none d-lg-flex justify-center align-center"
-      >
-        <v-img
-          :aspect-ratio="16/9"
-          max-width="600px"
-          src="https://ivoriginal.com/images/work/gfs-directory/directory-pannels.png"
-          style="border-radius: 8px;"
-        />
-      </v-col>
-      <!-- /Promo -->
+
+    <!-- Directory -->
+    <v-row
+      class="mt-6 py-6 justify-center flex-xs-column-reverse"
+      style="background: #e8f0fe; width: 100%;"
+    >
+      <!-- Copy -->
       <v-col
         sm="12"
         lg="4"
-        class="d-flex flex-column justify-center px-6"
+        class="d-flex flex-column justify-center"
       >
-        <!-- Header -->
+        <div class="pa-0 align-left text-left column">
+          <div class="text-h4 text-left pl-lg-6 font-weight-bold">
+            Meet the Community Directory, where you can <span style="color: var(--v-primary-base);">filter</span> people and companies by skills and verticals, see who's offering <span style="color: var(--v-primary-base);">help</span> and who's <span style="color: var(--v-primary-base);">open to work</span> or hiring!
+          </div>
+        </div>
+      </v-col>
+      <!-- /Copy -->
+      <!-- Product image -->
+      <v-col
+        sm="12"
+        lg="6"
+        class="fill-height justify-center align-center"
+      >
+        <v-img
+          contain
+          src="img/directory_multi.png"
+        />
+      </v-col>
+      <!-- /Product image -->
+      <!-- /2 -->
+    </v-row>
+    <!-- /Directory -->
+
+    <!-- Admin -->
+    <v-row
+      class="py-6 mb-2 justify-center"
+      style="width: 100%;"
+    >
+      <!-- Product image -->
+      <v-col
+        sm="12"
+        lg="6"
+        class="fill-height d-lg-flex justify-center align-center"
+      >
+        <v-img
+          contain
+          max-width="640px"
+          src="img/directory_multi.png"
+        />
+      </v-col>
+      <!-- /Product image -->
+      <!-- Copy -->
+      <v-col
+        sm="12"
+        lg="4"
+        class="d-flex flex-column justify-center"
+      >
         <div>
-          <div class="pa-0">
-            <div class="text-h3 text-left hache-1">
-              A community directory
+          <div class="pa-0 align-left text-left column">
+            <div class="text-h4 text-left font-weight-bold">
+              As a Community Builder, you can <span style="color: var(--v-primary-base);">manage</span> your community, <span style="color: var(--v-primary-base);">publish</span> relevant updates and put your <span style="color: var(--v-primary-base);">data</span> to work for you, all from your Dashboard.
             </div>
-            <nuxt-link to="/directory">
+            <!-- <nuxt-link to="/directory">
               <CTButton
                 contained
               >
                 More info
               </CTButton>
-            </nuxt-link>
+            </nuxt-link> -->
           </div>
         </div>
-        <!-- /Header -->
       </v-col>
-      <!-- /2 -->
+      <!-- /Copy -->
     </v-row>
-    <!-- /3 -->
-    <!-- 4 -->
+    <!-- /Admin -->
+
+    <!-- Getting Started -->
     <v-col
       sm="12"
       lg="12"
-      class="d-flex flex-column accent align-center justify-center px-6"
+      class="d-flex flex-column align-center justify-center px-6 py-6"
+      style="background: #e8f0fe;"
     >
+      <!-- Header -->
       <v-col
         sm="12"
-        lg="6"
-        class="d-flex flex-column justify-center px-6"
+        lg="8"
+        class="d-flex flex-column justify-center px-6 py-6"
       >
-        <!-- Header -->
         <div>
-          <div class="pa-0">
-            <div class="text-h2 text-center hache-1">
-              Find out how Google for Startups uses it
+          <div class="pa-0 mb-4 justify-center">
+            <div class="text-h3 text-center font-weight-bold">
+              <span>Need help importing your members? Don't know how to spark connections? <span style="color: var(--v-primary-base);">We're here to help.</span></span>
+            </div>
+            <br />
+            <div class="text-h4 text-center">
+              <span>Click on that shiny blue bubble at the right bottom and we'll be there for you</span>
             </div>
           </div>
         </div>
-        <!-- /Header -->
-        <!-- Google login -->
         <div
-          class="mt-4 pa-4"
+          class="d-flex justify-end"
+          style="margin-top: -56px;"
         >
-          <nuxt-link to="/create">
-            <CTButton
-              large
-              block
-              contained
-              color="primary"
-              @click="e1 = 2"
-              class="elevation-0"
-            >
-              Find out
-            </CTButton>
-          </nuxt-link>
+          <v-img
+            max-width="124px"
+            src="img/arrow.svg"
+          />
         </div>
-        <!-- /Google login -->
-      <!-- /Name -->
       </v-col>
+      <!-- /Header -->
     </v-col>
-    <!-- /4 -->
-    <!-- 5 -->
-    <v-row>
+    <!-- /Getting Started -->
+
+    <!-- Slack -->
+    <v-row
+      class="mt-6 py-6 justify-center"
+      style="width: 100%;"
+    >
+      <!-- Copy -->
       <v-col
         sm="12"
         lg="4"
-        class="d-flex flex-column justify-center px-6"
+        class="d-flex flex-column justify-center"
       >
-        <!-- Header -->
-        <div>
-          <div class="pa-0">
-            <div class="text-h3 text-left hache-1">
-              Un panel de administración para admins
-            </div>
-            <nuxt-link to="/directory">
-              <CTButton>
-                Find out
-              </CTButton>
-            </nuxt-link>
+        <div class="pa-0 align-left text-left column">
+          <div class="text-h4 text-left pl-lg-6 font-weight-bold">
+            <v-chip
+              class="mb-2"
+              label
+            >
+              Coming soon
+            </v-chip>
+            <br />
+            <span>
+            Connect your Directory to <span style="color: var(--v-primary-base);">Slack</span> or <span style="color: var(--v-primary-base);">Discord</span> to get custom matches, searching members from a channel and more.
+            </span>
           </div>
+          <!-- <nuxt-link to="/directory">
+            <CTButton
+              contained
+            >
+              More info
+            </CTButton>
+          </nuxt-link> -->
         </div>
-        <!-- /Header -->
       </v-col>
-      <!-- Promo -->
+      <!-- /Copy -->
+      <!-- Product image -->
       <v-col
-        lg="8"
+        lg="6"
         class="fill-height d-none d-lg-flex justify-center align-center"
       >
         <v-img
-          :aspect-ratio="16/9"
-          max-width="600px"
-          src="https://storage.googleapis.com/gfs-directory/pic/X/P/XPbk2ztq25p0BMfZWc2aD.png"
-          style="border-radius: 8px;"
+          contain
+          src="img/directory_multi.png"
         />
       </v-col>
-      <!-- /Promo -->
+      <!-- /Product image -->
       <!-- /2 -->
     </v-row>
-    <!-- /5 -->
-    <!-- 6 -->
-    <v-col
+    <!-- /Slack -->
+
+    <!-- GFS -->
+    <!-- <v-col
       sm="12"
       lg="12"
-      class="d-flex flex-column align-center justify-center px-6"
+      class="d-flex flex-column align-center justify-center px-6 py-6"
+      style="background: var(--v-primary-lighten5);"
     >
       <v-col
         sm="12"
-        lg="6"
+        lg="12"
         class="d-flex flex-column justify-center px-6"
       >
-        <!-- Header -->
         <div>
-          <div class="pa-0">
-            <div class="text-h2 text-center hache-1">
-              Get started in 3 steps
+          <div class="pa-0 justify-center">
+            <div class="text-h3 text-center hache-1">
+              <strong>Trusted by<br><span style="color: var(--v-primary-base);">Google for Startups</span><br>in 7 countries</strong>
             </div>
           </div>
         </div>
-        <!-- /Header -->
-        <!--  -->
-        <v-card
-          class="d-flex justify-center mb-6"
-          :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'"
-          flat
-          tile
-        >
-          <v-card
-            class="pa-2"
-            outlined
-            tile
-          >
-            justify-center
-          </v-card>
-          <v-card
-            class="pa-2"
-            outlined
-            tile
-          >
-            justify-center
-          </v-card>
-          <v-card
-            class="pa-2"
-            outlined
-            tile
-          >
-            justify-center
-          </v-card>
-        </v-card>
-        <!-- / -->
-      <!-- /Name -->
       </v-col>
-    </v-col>
-    <!-- /6 -->
-    <!-- 7 -->
+    </v-col> -->
+    <!-- /GFS -->
+
+    <!-- GFS -->
     <v-col
       sm="12"
       lg="12"
-      class="d-flex flex-column accent align-center justify-center px-6"
+      class="d-flex flex-column align-center justify-center px-6 py-6"
+      style="background: #e8f0fe; margin-bottom: -124px !important; padding-bottom: 80px !important;"
+    >
+      <!-- Header -->
+      <v-col
+        sm="12"
+        lg="12"
+        class="d-flex flex-column justify-center px-6 mb-6 pt-6"
+      >
+        <div>
+          <div class="pa-0 mb-4 justify-center">
+            <div class="text-h3 text-center hache-1">
+              <strong>Trusted by<br><span style="color: var(--v-primary-base);">Google for Startups</span><br>all across the world</strong>
+            </div>
+          </div>
+        </div>
+      </v-col>
+      <!-- /Header -->
+      <!-- Cards -->
+      <v-row
+        class="pb-6 mb-6"
+      >
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          max-width="400"
+          style="border-radius: 24px;"
+        >
+          <v-card-text class="text-h5 font-weight-bold">
+            "This is the best product I've ever used."
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Elias Veris</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          max-width="400"
+          style="border-radius: 24px;"
+        >
+          <v-card-text class="text-h5 font-weight-bold">
+            "This is the best product I've ever used."
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Inbal Perlman</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-2 pa-2 text-left"
+          color="#fff"
+          light
+          max-width="400"
+          style="border-radius: 24px;"
+        >
+          <v-card-text
+            class="text-h5 font-weight-bold"
+          >
+            "This is the best product I've ever used."
+          </v-card-text>
+          <v-card-actions>
+            <v-list-item>
+              <v-list-item-avatar color="grey darken-3">
+                <v-img
+                  class="elevation-6"
+                  alt=""
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Kristine Chung</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-actions>
+        </v-card>
+      </v-row>
+      <!-- /Cards -->
+    </v-col>
+    <!-- /GFS -->
+
+    <!-- Banner -->
+    <div
+      sm="12"
+      lg="12"
+      class="d-flex flex-lg-row flex-xs-column align-center justify-center my-6 mx-sm-4 pt-6"
+      style="width: 100%;"
     >
       <v-col
         sm="12"
-        lg="6"
-        class="d-flex flex-column justify-center px-6"
+        lg="7"
+        class="d-flex flex-lg-row flex-xs-column align-center pa-8 primary"
+        style="border-radius: 24px;"
       >
         <!-- Header -->
-        <div>
-          <div class="pa-0">
-            <div class="text-h2 text-center hache-1">
-              Activate your community
-            </div>
+        <div class="px-4">
+          <div
+            class="text-h3 white--text font-weight-bold text-lg-left mr-lg-4 py-lg-4"
+          >
+            Create now your free account
           </div>
         </div>
         <!-- /Header -->
         <!-- Google login -->
         <div
-          class="mt-4 pa-4"
+          class="mt-4 pa-4 d-flex flex-lg-row flex-xs-column"
         >
-          <nuxt-link to="/create">
+          <nuxt-link
+            to="/create"
+            class="text-decoration-none"
+          >
             <CTButton
               large
               block
               contained
-              color="primary"
-              @click="e1 = 2"
+              color="white"
               class="elevation-0"
+              @click="e1 = 2"
             >
-              Find out
+              <span class="px-4">Get started</span>
             </CTButton>
           </nuxt-link>
         </div>
         <!-- /Google login -->
       <!-- /Name -->
       </v-col>
-    </v-col>
-    <!-- /7 -->
-    <!-- Footer -->
-    <v-footer>
-      <span>&copy; {{ new Date().getFullYear() }} CommunityTools</span>
-    </v-footer>
-    <!-- /Footer -->
+    </div>
+    <!-- /Banner -->
   </v-row>
 </template>
 
@@ -331,3 +465,9 @@ export default {
   layout: 'default'
 }
 </script>
+
+<style scoped>
+  .v-btn {
+    min-height: 44px;
+  }
+</style>

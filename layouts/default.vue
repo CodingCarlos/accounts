@@ -25,48 +25,15 @@
       >
         <nuxt-link to="/directory">
           <CTButton
+            v-for="link in links"
+            :key="link"
             text
-            color="black"
+            rounded
+            class="my-2 black--text"
           >
-            <span class="font-weight-bold">
-              Product
-            </span>
+            {{ link }}
           </CTButton>
         </nuxt-link>
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            About
-          </span>
-        </CTButton>
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            Blog
-          </span>
-        </CTButton>
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            Contact
-          </span>
-        </CTButton>
-        <a href="https://intercom.help/communitytools/">
-          <CTButton
-            text
-            color="black"
-          >
-            <span class="font-weight-bold">
-              Help
-            </span>
-          </CTButton>
-        </a>
       </v-row>
 
       <nuxt-link
@@ -155,8 +122,11 @@
       </v-row>
       <!-- /Cookies -->
 
+      <!--  -->
       <Nuxt />
+      <!-- / -->
 
+      <!-- Footer -->
       <v-footer
         color="white"
       >
@@ -191,12 +161,11 @@ export default {
     title: 'Community Tools',
     dialog: false,
     links: [
-      'Home',
-      'About Us',
-      'Team',
-      'Services',
+      'Product',
+      'About',
       'Blog',
-      'Contact Us'
+      'Contact',
+      'Help'
     ]
   })
 }

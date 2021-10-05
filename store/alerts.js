@@ -1,10 +1,10 @@
 const DEFAULT_COLOR = 'success'
 
-export const state = {
+export const state = () => ({
   visible: false,
   color: null,
   text: ''
-}
+})
 
 let timeout = null
 

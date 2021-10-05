@@ -2,13 +2,14 @@
   <v-container>
     <v-row dense>
       <v-col
-        v-for="card in cards"
-        :key="card.title"
+        v-for="directory in list"
+        :key="directory.id"
         sm="12"
         lg="3"
-        :cols="card.flex"
+        :cols="directory.flex"
+        class="d-flex flex-column"
       >
-        <v-card>
+        <v-card class="flex-grow-1 d-flex flex-column justify-space-between">
           <!-- <v-img
             :src="card.src"
             class="white--text align-end"
@@ -17,19 +18,26 @@
           >
           </v-img> -->
           <v-card-text>
-            <div>madrid.gfs.directory</div>
-            <p class="text-h4 text--primary" v-text="card.title" />
+            <div>{{ directory.subdomain }}</div>
+            <p class="text-h4 text--primary">
+              {{ directory.name || directory.subdomain }}
+            </p>
           </v-card-text>
           <v-card-actions>
-            <a href="https://madrid.gfs.directory/#/directory">
+            <a :href="`https://${directory.subdomain}`">
               <v-btn outlined>
                 Directory
               </v-btn>
             </a>
-            <v-btn outlined>
-              <!-- <v-icon>mdi-lock</v-icon> -->
-              Adminland
-            </v-btn>
+            <a
+              v-if="directory.role === 'admin'"
+              :href="`https://${directory.subdomain}`"
+            >
+              <v-btn outlined>
+                <!-- <v-icon>mdi-lock</v-icon> -->
+                Adminland
+              </v-btn>
+            </a>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -38,15 +46,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data: () => ({
-    cards: [
-      { title: 'GFS Madrid', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg' },
-      { title: 'GFS Tel Aviv', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg' },
-      { title: 'GFS Warsaw', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg' },
-      { title: 'GFS Tokyo', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg' },
-      { title: 'GFS Seoul', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg' }
-    ]
-  })
+  middleware: 'auth',
+  computed: {
+    ...mapState({
+      list: state => state.directories.list
+    })
+  }
 }
 </script>

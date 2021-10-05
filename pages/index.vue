@@ -28,18 +28,17 @@
         <v-row
           class="mt-4 pa-4 justify-center align-center"
         >
-          <nuxt-link to="/onboarding">
+          <!-- <nuxt-link to="/onboarding"> -->
             <CTButton
               large
-              block
               contained
               color="primary"
               class="elevation-0"
-              @click="e1 = 2"
+              @click="login()"
             >
               Sign up with Google
             </CTButton>
-          </nuxt-link>
+          <!-- </nuxt-link> -->
           <span class="mx-3">or</span>
           <nuxt-link
             to="/create"
@@ -50,7 +49,6 @@
               block
               color="primary"
               class="elevation-0 mr-2"
-              @click="e1 = 2"
             >
               Use your mail
             </CTButton>
@@ -565,7 +563,10 @@
 </template>
 
 <script>
+import authMixin from '@/pages/mixins/auth'
+
 export default {
+  mixins: [authMixin],
   layout: 'default'
 }
 </script>

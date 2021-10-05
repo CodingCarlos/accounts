@@ -61,6 +61,8 @@
 
       <Nuxt />
     </v-main>
+
+    <AlertBar />
   </v-app>
 </template>
 

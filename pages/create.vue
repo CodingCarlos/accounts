@@ -122,9 +122,10 @@
 </template>
 
 <script>
-import firebase from 'firebase'
+import authMixin from '@/pages/mixins/auth'
 
 export default {
+  mixins: [authMixin],
   layout: 'default-2',
   head: {
     title: 'Create account',
@@ -138,49 +139,6 @@ export default {
   },
   created () {
     this.auth()
-  },
-  methods: {
-    auth () {
-      if (!this.$fire.auth.currentUser) {
-        return false
-      }
-
-      return this.$fire.auth.currentUser.getIdToken()
-        .then(token => this.$store.dispatch('auth/login', { token }))
-        .then(() => {
-          this.$store.dispatch('alerts/show', {
-            color: 'black',
-            text: 'Welcome back 🤙'
-          })
-
-          if (this.$route.params.redirect) {
-            this.$router.replace(this.$route.params.redirect)
-          } else {
-            this.$router.replace('/launcher')
-          }
-        })
-        .catch((error) => {
-          console.error(error.code, error.message)
-          this.$store.dispatch('alerts/show', {
-            color: 'black',
-            text: 'Something\'s not working 🥴 Try loggin in again 🔐'
-          })
-        })
-    },
-    login () {
-      const provider = new firebase.auth.GoogleAuthProvider()
-      // const provider = this.$fire.auth.GoogleAuthProvider
-      return this.$fire.auth.signInWithPopup(provider)
-        .then(this.auth)
-        .catch((error) => {
-          if (error.code !== 'auth/popup-closed-by-user') {
-            this.$store.dispatch('alerts/show', {
-              color: 'black',
-              text: 'Google authentication is not working 😳 Try again in a few minutes 🤞'
-            })
-          }
-        })
-    }
   }
 }
 </script>

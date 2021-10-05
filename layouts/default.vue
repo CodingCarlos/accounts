@@ -57,8 +57,11 @@
       </v-row>
       <!-- /Cookies -->
 
+      <!--  -->
       <Nuxt />
+      <!-- / -->
 
+      <!-- Footer -->
       <v-footer
         color="white"
       >
@@ -95,12 +98,11 @@ export default {
     title: 'Community Tools',
     dialog: false,
     links: [
-      'Home',
-      'About Us',
-      'Team',
-      'Services',
+      'Product',
+      'About',
       'Blog',
-      'Contact Us'
+      'Contact',
+      'Help'
     ]
   })
 }

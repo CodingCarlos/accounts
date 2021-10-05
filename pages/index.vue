@@ -1,12 +1,18 @@
 <template>
-  <v-row justify="center" align="center" class="ma-0 align-center text-center">
+  <v-container
+    justify="center"
+    align="center"
+    class="ma-0 pa-0 align-center text-center"
+  >
+    <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- / -->
 
     <!-- Value prop -->
     <v-row
-      class="py-6 my-6 justify-center"
+      class="d-flex py-6 my-6 justify-center"
     >
       <v-col
         class="d-flex flex-column justify-center pt-8"
@@ -60,8 +66,8 @@
     <!-- /Value prop -->
 
     <!-- Clients -->
-    <div
-      class="mx-lg-6"
+    <v-row
+      class="px-lg-6"
     >
       <v-row
         class="justify-center px-6"
@@ -109,13 +115,13 @@
           />
         </v-col>
       </v-row>
-    </div>
+    </v-row>
     <!-- /Clients -->
 
     <!-- Directory -->
     <v-row
-      class="mt-6 py-6 justify-center flex-xs-column-reverse"
-      style="background: #e8f0fe; width: 100%;"
+      class="mt-6 py-6 mx-o justify-center flex-xs-column-reverse"
+      style="background: #e8f0fe;"
     >
       <!-- Copy -->
       <v-col
@@ -123,8 +129,8 @@
         lg="4"
         class="d-flex flex-column justify-center"
       >
-        <div class="pa-0 align-left text-left column">
-          <div class="text-h4 text-left pl-lg-6 font-weight-bold">
+        <div class="pa-0 pa-xs-0 align-left text-left column">
+          <div class="text-h4 text-left pl-lg-6 font-weight-bold pa-xs-0">
             Meet the Community Directory, where you can <span style="color: var(--v-primary-base);">filter</span> people and companies by skills and verticals, see who's offering <span style="color: var(--v-primary-base);">help</span> and who's <span style="color: var(--v-primary-base);">open to work</span> or hiring!
           </div>
         </div>
@@ -149,7 +155,6 @@
     <!-- Admin -->
     <v-row
       class="py-6 mb-2 justify-center"
-      style="width: 100%;"
     >
       <!-- Product image -->
       <v-col
@@ -159,7 +164,6 @@
       >
         <v-img
           contain
-          max-width="640px"
           src="img/directory_multi.png"
         />
       </v-col>
@@ -229,8 +233,7 @@
 
     <!-- Slack -->
     <v-row
-      class="mt-6 py-6 justify-center"
-      style="width: 100%;"
+      class="py-6 mx-0 justify-center"
     >
       <!-- Copy -->
       <v-col
@@ -256,13 +259,6 @@
               Connect your Directory to <span style="color: var(--v-primary-base);">Slack</span> or <span style="color: var(--v-primary-base);">Discord</span> to get custom matches, searching members from a channel and more.
             </span>
           </div>
-          <!-- <nuxt-link to="/directory">
-            <CTButton
-              contained
-            >
-              More info
-            </CTButton>
-          </nuxt-link> -->
         </div>
       </v-col>
       <!-- /Copy -->
@@ -277,38 +273,14 @@
         />
       </v-col>
       <!-- /Product image -->
-      <!-- /2 -->
     </v-row>
     <!-- /Slack -->
 
     <!-- GFS -->
-    <!-- <v-col
+    <v-row
       sm="12"
       lg="12"
-      class="d-flex flex-column align-center justify-center px-6 py-6"
-      style="background: var(--v-primary-lighten5);"
-    >
-      <v-col
-        sm="12"
-        lg="12"
-        class="d-flex flex-column justify-center px-6"
-      >
-        <div>
-          <div class="pa-0 justify-center">
-            <div class="text-h3 text-center hache-1">
-              <strong>Trusted by<br><span style="color: var(--v-primary-base);">Google for Startups</span><br>in 7 countries</strong>
-            </div>
-          </div>
-        </div>
-      </v-col>
-    </v-col> -->
-    <!-- /GFS -->
-
-    <!-- GFS -->
-    <v-col
-      sm="12"
-      lg="12"
-      class="d-flex flex-column align-center justify-center px-6 py-6"
+      class="d-flex flex-column align-center justify-center px-6 py-6 mx-0"
       style="background: #e8f0fe; margin-bottom: -124px !important; padding-bottom: 80px !important;"
     >
       <!-- Header -->
@@ -438,7 +410,6 @@
           class="mx-2 pa-2 text-left"
           color="#fff"
           light
-          max-width="400"
           style="border-radius: 24px;"
         >
           <v-card-text class="text-h5 font-weight-bold">
@@ -463,7 +434,6 @@
           class="mx-2 pa-2 text-left"
           color="#fff"
           light
-          max-width="400"
           style="border-radius: 24px;"
         >
           <v-card-text class="text-h5 font-weight-bold">
@@ -488,7 +458,6 @@
           class="mx-2 pa-2 text-left"
           color="#fff"
           light
-          max-width="400"
           style="border-radius: 24px;"
         >
           <v-card-text
@@ -513,20 +482,21 @@
         </v-card>
       </v-row>
       <!-- /Cards -->
-    </v-col>
+    </v-row>
     <!-- /GFS -->
 
     <!-- Banner -->
     <div
-      lg="6"
-      class="my-6 mx-sm-4 pt-6"
+      class="my-6 pt-6 justify-center align-center d-flex"
     >
-      <div
-        class="pa-8 primary banner d-flex align-center"
+      <v-col
+        lg="8"
+        class="pa-8 primary banner align-center"
         style="border-radius: 24px;"
       >
         <!-- Header -->
         <v-col
+        lg="10"
           class="px-lg-4 pa-sm-0"
         >
           <div
@@ -538,6 +508,7 @@
         <!-- /Header -->
         <!-- CTA -->
         <v-col
+          lg="2"
           class="align-xs-center"
         >
           <nuxt-link
@@ -556,10 +527,11 @@
           </nuxt-link>
         </v-col>
         <!-- /CTA -->
-      </div>
+      </v-col>
     </div>
     <!-- /Banner -->
-  </v-row>
+
+  </v-container>
 </template>
 
 <script>
@@ -595,5 +567,5 @@ export default {
       .banner .text-h3 {
         text-align: center;
       }
-}
+  }
 </style>

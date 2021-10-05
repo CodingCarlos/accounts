@@ -1,103 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      flat
-      fixed
-      class="white justify-space-between px-lg-6"
-    >
-      <nuxt-link to="/">
-        <!-- <v-toolbar-title v-text="title" /> -->
-        <v-img
-          height="56"
-          width="164"
-          src="https://communitytools.co/img/logo.svg"
-          class="mr-8"
-          contain
-        />
-      </nuxt-link>
-
-      <v-spacer class="d-lg-none" />
-
-      <v-row
-        horizontal
-        class="elevation-0 d-none d-lg-flex"
-      >
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            Help
-          </span>
-        </CTButton>
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            About
-          </span>
-        </CTButton>
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            Blog
-          </span>
-        </CTButton>
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            Contact
-          </span>
-        </CTButton>
-        <a href="https://intercom.help/communitytools/">
-          <CTButton
-            text
-            color="black"
-          >
-            <span class="font-weight-bold">
-              Help
-            </span>
-          </CTButton>
-        </a>
-      </v-row>
-
-      <nuxt-link
-        to="/create"
-        class="hidden-md-and-down mr-2"
-      >
-        <CTButton
-          contained
-          class="elevation-0"
-        >
-          Create account
-        </CTButton>
-      </nuxt-link>
-      <nuxt-link
-        to="/login"
-        class="hidden-md-and-down"
-      >
-        <CTButton>
-          Log in
-        </CTButton>
-      </nuxt-link>
-
-      <nuxt-link
-        to="/create"
-        class="hidden-lg-and-up"
-      >
-        <CTButton
-          contained
-        >
-          Get started
-        </CTButton>
-      </nuxt-link>
-    </v-app-bar>
+    <NavigationTopbar />
 
     <v-main class="pb-0">
       <!-- Cookies -->
@@ -180,6 +83,8 @@
         </v-row>
       </v-footer>
     </v-main>
+
+    <AlertBar />
   </v-app>
 </template>
 

@@ -5,6 +5,7 @@
     fixed
     class="white justify-space-between px-lg-6"
   >
+    <!-- Logo -->
     <NavigationTopbarLogo />
 
     <v-spacer class="d-lg-none" />
@@ -46,8 +47,8 @@ export default {
     links () {
       return [
         {
-          text: 'Help',
-          route: ''
+          text: 'Product',
+          route: '/directory'
         },
         {
           text: 'About',

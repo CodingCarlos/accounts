@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!-- Topbar -->
     <NavigationTopbar />
 
     <v-main class="pb-0">

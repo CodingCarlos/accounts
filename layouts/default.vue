@@ -23,14 +23,16 @@
         horizontal
         class="elevation-0 d-none d-lg-flex"
       >
-        <CTButton
-          text
-          color="black"
-        >
-          <span class="font-weight-bold">
-            Help
-          </span>
-        </CTButton>
+        <nuxt-link to="/directory">
+          <CTButton
+            text
+            color="black"
+          >
+            <span class="font-weight-bold">
+              Product
+            </span>
+          </CTButton>
+        </nuxt-link>
         <CTButton
           text
           color="black"

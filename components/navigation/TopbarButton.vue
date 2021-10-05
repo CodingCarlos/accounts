@@ -2,9 +2,8 @@
   <CTButton
     text
     color="black"
+    class="font-weight-bold"
   >
-    <span class="font-weight-bold">
-      <slot />
-    </span>
+    <slot />
   </CTButton>
 </template>

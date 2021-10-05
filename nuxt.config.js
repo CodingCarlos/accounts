@@ -1,12 +1,13 @@
-import vuetifyOptions from './plugins/vuetify.options'
-import i18n from './i18n'
+import path from 'path'
 
-const path = require('path')
+import vuetifyOptions from './plugins/vuetify.options'
+import firebase from './plugins/firebase.config'
+import i18n from './i18n'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Accounts - Community Tools',
+    titleTemplate: '%s - Community Tools',
     title: 'Community Tools Accounts',
     meta: [
       { charset: 'utf-8' },
@@ -36,6 +37,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/dotenv',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify'
   ],
@@ -46,7 +48,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/firebase'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -68,6 +71,9 @@ export default {
 
   // i18n settings
   i18n,
+
+  // Firebase config options
+  firebase,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

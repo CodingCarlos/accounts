@@ -1,72 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      flat
-      fixed
-      class="white justify-space-between px-lg-6"
-    >
-      <nuxt-link to="/">
-        <!-- <v-toolbar-title v-text="title" /> -->
-        <v-img
-          height="56"
-          width="164"
-          src="https://communitytools.co/img/logo.svg"
-          class="mr-8"
-          contain
-        />
-      </nuxt-link>
-
-      <v-spacer class="d-lg-none" />
-
-      <v-row
-        horizontal
-        class="elevation-0 d-none d-lg-flex"
-      >
-        <nuxt-link to="/directory">
-          <CTButton
-            v-for="link in links"
-            :key="link"
-            text
-            rounded
-            class="my-2 black--text"
-          >
-            {{ link }}
-          </CTButton>
-        </nuxt-link>
-      </v-row>
-
-      <nuxt-link
-        to="/create"
-        class="hidden-md-and-down mr-2"
-      >
-        <CTButton
-          contained
-          class="elevation-0"
-        >
-          Create account
-        </CTButton>
-      </nuxt-link>
-      <nuxt-link
-        to="/login"
-        class="hidden-md-and-down"
-      >
-        <CTButton>
-          Log in
-        </CTButton>
-      </nuxt-link>
-
-      <nuxt-link
-        to="/create"
-        class="hidden-lg-and-up"
-      >
-        <CTButton
-          contained
-        >
-          Get started
-        </CTButton>
-      </nuxt-link>
-    </v-app-bar>
+    <!-- Topbar -->
+    <NavigationTopbar />
 
     <v-main class="pb-0">
       <!-- Cookies -->
@@ -152,6 +87,8 @@
         </v-row>
       </v-footer>
     </v-main>
+
+    <AlertBar />
   </v-app>
 </template>
 
